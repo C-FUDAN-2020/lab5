@@ -27,7 +27,7 @@ int a = -1, b = -1, c = 0;
 
 if (a > b++)
 printf("branch one\n\n");
-else;
+else
 if (a < b)
 c++;
 else;
