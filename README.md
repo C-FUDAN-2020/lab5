@@ -6,7 +6,7 @@
 
 ## 获取及提交lab
 
-**获取**：通过 `https://github.com/C-FUDAN-2020/lab5`，获取（建议通过Download ZIP方式下载）。
+**获取**：通过 `https://github.com/C-FUDAN-2020/lab5` 获取。
 
 **提交物**：将你完成目标1的思考题、目标2的源代码文件作为 lab5 的提交物。
 
@@ -59,7 +59,7 @@ printf("a leap year.\n");
 
 ## PJ 实现第一步
 
-从今天开始，lab 将围绕 PJ 的实现进行展开，今天我们要学的是第一步，如何如何输入命令与打印提示。
+从今天开始，lab 将围绕 PJ 的实现进行展开，今天我们要学的是第一步，如何输入命令与打印提示。
 
 实现的方法是使用 `if` 或 `switch case`
 
@@ -81,7 +81,8 @@ printf("a leap year.\n");
 
 2. 条件语句判断
     ```c
-    if (compare_string(buff, HELP) == 0) {
+    // 若 buff 和 HELP 相等，则打印命令提示
+    if (请自行编写判断语句) {
         printf("\t[\\h]\t打印命令提示\n");
         printf("\t[\\p]\t打印当前地图\n");
         printf("\t[\\l <filename>]\t导入地图\n");
@@ -95,16 +96,7 @@ printf("a leap year.\n");
     }
     ```
 
-    > compare_string 函数是为了方便写的宏定义
-
-    ```c
-    #include <string.h>
-    #define compare_string(x, y) strncmp(x, y, strlen(y))
-    ```
-
-    **宏定义还能定义函数？请大家思考下宏定义的实现原理是什么**
-
-    > `strncmp` 和 `strlen` 是 `<string.h>` 的库函数，请大家自行百度它的用法
+    > 提示：关于字符串的比较等操作可以查找 `<string.h>` 的库函数
 
 3. 输入语句的获取
 
@@ -117,10 +109,10 @@ printf("a leap year.\n");
     ```
 
     为什么助教会放弃 `scanf` ？答案会在之后有关 PJ 实现的 lab 中发布。
-    *现在请大家自行百度，考虑 `scanf` 和 `fgets` 有哪些异同*
+    *现在请大家自行百度，了解 `scanf` 和 `fgets` 有哪些异同*
 
 
 4. 最后请大家补全宏定义指令的其他部分，将代码打包提交
 
     - 不要求循环打印，程序可以只运行一个输入指令后直接退出
-    - 注意，输入未知字符时程序的输出一定要实现！
+    - 注意，输入未知字符时程序的输出**一定要实现**！
