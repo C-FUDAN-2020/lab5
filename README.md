@@ -30,7 +30,8 @@ printf("branch one\n\n");
 else
 if (a < b)
 c++;
-else;
+else
+c--;
 printf("%d\n", c);
 ```
 
