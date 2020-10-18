@@ -1,18 +1,60 @@
 # Lab 5
 
     本节目标：
-        1. if 语句与 switch case 语句
+        1. 嵌套 if 语句
         2. PJ 实现第一步：输入命令与打印
 
 ## 获取及提交lab
 
 **获取**：通过 `https://github.com/C-FUDAN-2020/lab5`，获取（建议通过Download ZIP方式下载）。
 
-**提交物**：将你完成目标2的源代码文件作为 lab5 的提交物。
+**提交物**：将你完成目标1的思考题、目标2的源代码文件作为 lab5 的提交物。
 
 **提交**：将提交物文档命名为学号_姓名 （如20302010000_王明），提交至超星学习通对应的作业中。
 
 **截止时间**：北京时间 2020年10月25日 23:59:59 
+
+## if 语句的嵌套问题
+
+请观察以下代码，思考命令行有何种输出
+
+> 请提交书面答案的文档
+
+### 问题一
+
+```c
+int a = -1, b = -1, c = 0;
+
+if (a > b++)
+printf("branch one\n\n");
+else;
+if (a < b)
+c++;
+else;
+printf("%d\n", c);
+```
+
+### 问题二
+
+请问下面的代码中，当 `year = 2020` 时，命令行输出什么，当 `year = 1000` 时呢？
+
+```c
+if (year % 4 == 0) 
+if (year % 100 == 0)
+if (year % 400 == 0)
+leap = 1;
+else
+leap = 0;
+else
+leap = 1;
+else
+leap = 0;
+if (leap)
+printf("%d is ", year);
+else
+printf("%d is not ", year);
+printf("a leap year.\n");
+```
 
 ## PJ 实现第一步
 
